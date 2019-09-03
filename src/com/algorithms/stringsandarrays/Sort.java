@@ -58,11 +58,21 @@ public class Sort {
         QuickSort(array, middle+1, high); //Sort right half
     }
 
+    public static void selectionSort(int[] array){
+        for(int i = 0; i < array.length-1; i++){
+            for(int j = i+1; j < array.length; j++){
+                if(array[i] > array[j])
+                    swap(array, i, j);
+            }
+        }
+    }
+
     public static void swap(int[] array, int a, int b) {
         int temp = array[a];
         array[a] = array[b];
         array[b] = temp;
     }
+
 }
 
 

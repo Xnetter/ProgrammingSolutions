@@ -104,18 +104,18 @@ public class Sort {
                 new LinkedList<String>(),
                 new LinkedList<String>(),
                 new LinkedList<String>(),
-        };
+        }; //Our "Buckets," or our Hash Table
         int count = 0;
         while (count < max) {
             for (String num : radix) {
                 buckets[Integer.parseInt(num.substring((max-1)-count, max-count))].add(num);
-            }
+            }//Sorts according to digit position.
             int subIndex = 0;
             for(LinkedList<String> bucket : buckets){
                 while(!bucket.isEmpty()){
                     radix[subIndex++] = bucket.poll();
                 }
-            }
+            }//Sort numbers according to bucket arrangement.
             count++;
         }
         for(int i = 0; i < radix.length; i++) {

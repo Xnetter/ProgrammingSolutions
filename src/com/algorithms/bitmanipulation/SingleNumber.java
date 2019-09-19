@@ -6,7 +6,7 @@ public class SingleNumber {
     int singleNumber(int[] nums) {
         int res = 0;
         for (int num : nums) {
-            res ^= num; // XOR records only the bits which appear an odd number of times. 
+            res ^= num; // XOR records only the bits which appear an odd number of times.
         }
         return res;
     }
